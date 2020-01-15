@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let number=prompt("Nhập vào số lượng số nguyên tố: ");
+        let n=2;
+        let count=0;
+            while (count< number) {
+                if (checkPrime(n)) {
+                    document.write(n + " ");
+                    count++;
+                }
+                n++;
+            }
+
+
+
+        function checkPrime(n) {
+            if (n < 2) {
+                return false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i === 0) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
