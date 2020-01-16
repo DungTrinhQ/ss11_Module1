@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào số phần tử của dãy: ");
+    let fibo1=0, fibo2=1, fibo3, fibo;
+    fibo="0, 1, ";
+    for(let i=2; i<a; i++){
+        fibo3 = fibo1 + fibo2;
+        fibo1 = fibo2;
+        fibo2 = fibo3;
+        fibo += fibo3 + ", ";
+    }
+    document.write(fibo);
+</script>
+
+</body>
+</html>

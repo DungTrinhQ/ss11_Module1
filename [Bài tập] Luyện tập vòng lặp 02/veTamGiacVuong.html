@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập vào chiều cao hình tam giác: ");
+    n = parseInt(n);
+    let i,j,s;
+    function veTamGiac1(){
+        for(i = 1; i<=n; i++){
+            // tạo hàng
+            for(j = 1; j<=i; j++){
+                document.writeln(" * ");
+            }
+            //xuống dòng sau khi hiện kết quả từng hàng
+            document.writeln("<br>");
+        }
+    }
+
+
+    function veTamGiac2(){
+        for(i = n; i>=1; i--){
+            // tạo hàng
+            for(j = 1; j<=i; j++){
+                document.writeln("*");
+            }
+            //xuống dòng sau khi hiện kết quả từng hàng
+            document.writeln("<br>");
+        }
+    }
+
+
+    function veTamGiac3() {
+        for(i = n; i>=1; i--){
+            for(s = 1; s<i; s++){
+                document.writeln("&nbsp&nbsp");
+            }
+            for (j=0;j<=n-s;j++){
+                document.writeln("*");
+            }
+            document.writeln("<br>");
+        }
+    }
+
+    function veTamGiac4() {
+        for(i = 1; i<=n; i++){
+            for (s=1;s<i;s++){
+                document.writeln("&nbsp&nbsp");
+            }
+            for(j = 0; j<=n-s; j++){
+                document.writeln("*");
+            }
+            document.writeln("<br>");
+        }
+    }
+
+
+    veTamGiac1();
+    document.write("<br>");
+    veTamGiac2();
+    document.writeln("<br>");
+    veTamGiac3();
+    document.writeln("<br>");
+    veTamGiac4();
+</script>
+
+</body>
+</html>

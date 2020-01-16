@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập vào số cần tính: ");
+    function tinhGiaiThua() {
+        let giaiThua = 1;
+        if (n == 0 || n == 1) {
+            return giaiThua;
+        }else{
+            for(let i = 1; i<=n; i++){
+                giaiThua *= i;
+            }
+            return giaiThua;
+        }
+    }
+    alert(n+"!"+" = "+tinhGiaiThua());
+</script>
+
+</body>
+</html>
